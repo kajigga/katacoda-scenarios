@@ -1,4 +1,4 @@
-Allow a code block to be executed `some-command`{{execute}}
+Allow a code block to be executed `docker container ls`{{execute}}
 
 For multiple terminals, execute the command on HOST1 `some-command`{{execute HOST1}}
 For multiple terminals, execute the command on HOST2 `some-command`{{execute HOST2}}
