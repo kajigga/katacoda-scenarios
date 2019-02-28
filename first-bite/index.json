@@ -25,8 +25,8 @@
     "assets": {
         "client": [
             {
-                "file": "*",
-                "target": "~/"
+                "file": "docker-compose.yml",
+                "target": "/home/scrapbook"
             }
         ]
     }
