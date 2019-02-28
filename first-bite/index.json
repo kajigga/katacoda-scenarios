@@ -17,7 +17,7 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "install_salt.sh"
+      "code": "assets/install_salt.sh"
     },
     "finish": {
       "text": "finish.md"
