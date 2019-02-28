@@ -27,6 +27,10 @@
             {
                 "file": "docker-compose.yml",
                 "target": "/home/scrapbook"
+            },
+            {
+                "file": "html",
+                "target": "/home/scrapbook/html"
             }
         ]
     }
