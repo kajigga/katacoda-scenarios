@@ -1,7 +1,6 @@
 { "title": "First Bite of Salt",
   "description": "First Bite of Salt",
   "details": {
-    "code": "install_salt.sh",
     "steps": [
       {
         "title": "Step 1",
@@ -17,7 +16,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "install_salt.sh",
     },
     "finish": {
       "text": "finish.md"
