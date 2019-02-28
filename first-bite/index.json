@@ -25,12 +25,8 @@
     "assets": {
         "client": [
             {
-                "file": "docker-compose.yml",
-                "target": "~/"
-            },
-            {
-                "file": "html/index.html",
-                "target": "~/html/"
+                "file": "*",
+                "target": "/home/scrapbook"
             }
         ]
     }
