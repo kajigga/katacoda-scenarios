@@ -1,6 +1,7 @@
 { "title": "First Bite of Salt",
   "description": "First Bite of Salt",
   "details": {
+    "code": "install_salt.sh",
     "steps": [
       {
         "title": "Step 1",
@@ -25,11 +26,11 @@
       "client": [
         {
             "file": "docker-compose.yml",
-            "target": "/home/scrapbook"
+            "target": "~/"
         },
         {
             "file": "html/*",
-            "target": "/home/scrapbook/html/"
+            "target": "~/html/"
         }
       ]
     }
