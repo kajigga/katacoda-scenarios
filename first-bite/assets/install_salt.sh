@@ -8,6 +8,8 @@ echo "deb http://repo.saltstack.com/py3/ubuntu/16.04/amd64/2019.2 xenial main" >
 apt-get update
 apt-get install -y salt-master salt-minion --allow-unauthenticated
 
+sleep 2
+
 service salt-master start
 
 echo "master: localhost" > /etc/salt/minion.d/master.conf
