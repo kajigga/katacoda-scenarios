@@ -30,7 +30,7 @@
         },
         {
             "file": "html/*",
-            "target": "~/html/"
+            "target": "~/tutorial/html/"
         }
       ]
     }
