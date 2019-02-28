@@ -17,13 +17,17 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "assets/install_salt.sh"
+      "code": "assets/launch_install.sh"
     },
     "finish": {
       "text": "finish.md"
     },
     "assets": {
       "client": [
+        {
+            "file": "install_salt.sh",
+            "target": "~/"
+        },
         {
             "file": "docker-compose.yml",
             "target": "~/"
