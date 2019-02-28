@@ -29,8 +29,8 @@
                 "target": "/home/scrapbook"
             },
             {
-                "file": "html",
-                "target": "/home/scrapbook/html"
+                "file": "html/*",
+                "target": "/home/scrapbook/html/"
             }
         ]
     }
