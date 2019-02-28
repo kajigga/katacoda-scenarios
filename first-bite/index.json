@@ -24,9 +24,12 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "editor-terminal",
+    "showdashboard": true,
+    "dashboard": "Dashboard"
   },
   "backend": {
-    "imageid": "docker"
+    "imageid": "docker",
+    "post": 80
   }
 }
