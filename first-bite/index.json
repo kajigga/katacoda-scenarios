@@ -25,10 +25,6 @@
     "assets": {
       "client": [
         {
-            "file": "install_salt.sh",
-            "target": "~/"
-        },
-        {
             "file": "docker-compose.yml",
             "target": "~/"
         },
