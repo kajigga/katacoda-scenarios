@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sh ~/launch_install.sh
+sh install_salt.sh
