@@ -33,7 +33,7 @@
   },
   "files": [
     "docker-compose.yml",
-    "html",
+    "html"
   ],
   "environment": {
     "uilayout": "editor-terminal",
