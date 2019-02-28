@@ -31,6 +31,10 @@
         ]
     }
   },
+  "files": [
+    "docker-compose.yml",
+    "html",
+  ],
   "environment": {
     "uilayout": "editor-terminal",
     "showdashboard": true,
