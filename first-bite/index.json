@@ -1,5 +1,4 @@
-{
-  "title": "First Bite of Salt",
+{ "title": "First Bite of Salt",
   "description": "First Bite of Salt",
   "details": {
     "steps": [
@@ -41,7 +40,7 @@
     "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Display 8080", "port": 8080}]
   },
   "backend": {
-    "imageid": "docker",
+    "imageid": "ubuntu",
     "post": 80
   }
 }
