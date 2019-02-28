@@ -25,16 +25,12 @@
     "assets": {
         "client": [
             {
-                "file": "./docker-compose.yml",
+                "file": "docker-compose.yml",
                 "target": "~/"
             }
         ]
     }
   },
-  "files": [
-    "docker-compose.yml",
-    "html"
-  ],
   "environment": {
     "uilayout": "editor-terminal",
     "showdashboard": true,
