@@ -8,4 +8,5 @@ RUN rpm --import https://repo.saltstack.com/yum/redhat/7/x86_64/archive/2018.3.4
 
 RUN yum -q -y install salt-master salt-minion; yum clean all; systemctl enable salt-master salt-minion
 
+
 CMD ["/usr/sbin/init"]

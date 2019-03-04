@@ -1,5 +1,8 @@
 version: "2"
 
+# https://hub.docker.com/r/centos/systemd/
+# https://hub.docker.com/r/jrei/systemd-ubuntu
+
 services:
   # web:
   #  image: nginx
@@ -20,6 +23,7 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
+      - "./minion.d:/etc/salt/minion.d:z"
   centos:
     build:
       context: ./
