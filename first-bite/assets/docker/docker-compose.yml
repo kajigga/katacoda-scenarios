@@ -19,8 +19,8 @@ services:
       - "4506"
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "./master.d:/etc/salt/master.d/:ro"
-  minion1:
+      - "./master.d:/etc/salt/master.d/:z"
+  centos:
     build:
       context: ./
       dockerfile: Dockerfile.minion
@@ -29,9 +29,8 @@ services:
       - sm
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "./minion.d:/etc/salt/minion.d/:ro"
-
-  minion-ubu:
+      - "./minion.d:/etc/salt/minion.d/:z"
+  ubuntu:
     build:
       context: ./
       dockerfile: Dockerfile.minion-ubu
