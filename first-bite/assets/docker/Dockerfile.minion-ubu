@@ -2,12 +2,16 @@ FROM jrei/systemd-ubuntu:18.04
 
 ENV container docker
 
-#COPY ./ss.repo /etc/yum.repos.d/saltstack.repo
+RUN apt-get update
 
-#RUN rpm --import https://repo.saltstack.com/yum/redhat/7/x86_64/archive/2018.3.4/SALTSTACK-GPG-KEY.pub
+RUN apt-get install -y wget gnupg
 
-#RUN yum -q -y install salt-minion; yum clean all; systemctl enable salt-minion
+RUN curl https://repo.saltstack.com/apt/ubuntu/18.04/amd64/2018.3/SALTSTACK-GPG-KEY.pub | apt-key add -
 
-RUN apt-get install salt-minion
+RUN echo "deb http://repo.saltstack.com/apt/ubuntu/18.04/amd64/2018.3 bionic main" > /etc/apt/sources.list.d/saltstack.list
+
+RUN apt-get update 
+
+RUN apt-get install -y salt-minion
 
 CMD ["/usr/sbin/init"]
