@@ -31,3 +31,7 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:ro"
 
+  minion-ubu:
+    build:
+      context: ./
+      dockerfile: Dockerfile.minion-ubu
