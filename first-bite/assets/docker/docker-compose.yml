@@ -34,3 +34,9 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile.minion-ubu
+    privileged: true
+    depends_on:
+      - sm
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "./minion.d:/etc/salt/minion.d/:z"
