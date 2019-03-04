@@ -9,3 +9,14 @@ services:
       - "80:80"
     environment:
       - NGINX_PORT=80
+  sm:
+    build: 
+      context: ./
+      dockerfile: Dockerfile.master
+    ports:
+      - "4505"
+      - "4506"
+  minion1:
+    build:
+      context: ./
+      dockerfile: Dockerfile.minion
