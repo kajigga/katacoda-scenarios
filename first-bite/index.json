@@ -29,10 +29,6 @@
             "target": "~/"
         },
         {
-            "file": "docker-compose.yml",
-            "target": "~/"
-        },
-        {
             "file": "html/*",
             "target": "~/tutorial/html/"
         },
