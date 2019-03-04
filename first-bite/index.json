@@ -32,6 +32,7 @@
             "file": "html/*",
             "target": "~/tutorial/html/"
         },
+
         {
             "file": "docker/*",
             "target": "~/tutorial/docker/"
