@@ -2,14 +2,13 @@
 
 # Add the current saltstack repo to APT
 
-cp ~/dotfiles/bashrc ~/.bashrc
-cp ~/dotfiles/vimrc ~/.vimrc
-mv ~/tutorial/master.d ~/tutorial/docker/master.d
-mv ~/tutorial/minion.d ~/tutorial/docker/minion.d
-
-. ~/.bashrc
+echo "waiting for .bashrc"
+until [ -f ~/.bashrc ]; do
+echo "."
 
 exit
+
+. ~/.bashrc
 
 cd ~/tutorial/docker
 docker-compose up -d

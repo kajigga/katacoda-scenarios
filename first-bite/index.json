@@ -34,16 +34,26 @@
         },
         {
             "file": "master.d/*",
-            "target": "~/tutorial/master.d"
+            "target": "~/tutorial/docker/master.d"
         },
         {
             "file": "minion.d/*",
-            "target": "~/tutorial/minion.d"
+            "target": "~/tutorial/docker/minion.d"
         },
         {
             "file": "dotfiles/*",
             "target": "~/dotfiles"
+        },
+        {
+            "file": "dotfiles/bashrc",
+            "target": "~/.bashrc"
+        },
+        {
+            "file": "dotfiles/vimrc",
+            "target": "~/.vimrc"
         }
+
+
       ]
     }
   },
