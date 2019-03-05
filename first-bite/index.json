@@ -42,7 +42,7 @@
         },
         {
             "file": "dotfiles/*",
-            "target": "~/.dotfiles"
+            "target": "~/dotfiles"
         }
       ]
     }
