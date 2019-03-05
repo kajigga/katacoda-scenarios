@@ -1,3 +1,7 @@
+Go to the docker folder `cd ~/tutorial/docker`{{execute}}.
+
+Start the salt master `docker-compose up sm`{{execute}}
+
 Allow a code block to be executed `docker container ls`{{execute}}
 
 For multiple terminals, execute the command on HOST1 `some-command`{{execute HOST1}}
