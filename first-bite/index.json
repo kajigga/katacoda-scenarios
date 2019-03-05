@@ -29,11 +29,6 @@
             "target": "~/"
         },
         {
-            "file": "html/*",
-            "target": "~/tutorial/html/"
-        },
-
-        {
             "file": "docker/*",
             "target": "~/tutorial/docker/"
         },
@@ -44,8 +39,11 @@
         {
             "file": "minion.d/*",
             "target": "~/tutorial/minion.d"
+        },
+        {
+            "file": ".dotfiles",
+            "target": "~/.dotfiles"
         }
-
       ]
     }
   },
