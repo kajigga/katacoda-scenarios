@@ -11,9 +11,10 @@ sleep 1
 
 source ~/.bashrc
 
+exit
+
 cd ~/tutorial/docker
 docker-compose up -d
-exit
 
 
 
