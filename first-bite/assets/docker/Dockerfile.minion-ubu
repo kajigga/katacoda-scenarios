@@ -1,17 +1,18 @@
-FROM jrei/systemd-ubuntu:18.04
+FROM jrei/systemd-ubuntu:latest
 
 ENV container docker
 
-RUN apt-get update
-
-RUN apt-get install -y wget gnupg
+RUN apt-get update && \
+    apt-get install -y wget gnupg
 
 RUN wget -O - https://repo.saltstack.com/apt/ubuntu/18.04/amd64/2018.3/SALTSTACK-GPG-KEY.pub | apt-key add -
 
 RUN echo "deb http://repo.saltstack.com/apt/ubuntu/18.04/amd64/2018.3 bionic main" > /etc/apt/sources.list.d/saltstack.list
 
-RUN apt-get update 
+RUN apt-get update && \ 
+    apt-get install -y salt-minion 
 
-RUN apt-get install -y salt-minion
+RUN systemctl enable salt-minion
 
-CMD ["/usr/sbin/init"]
+CMD ["/sbin/init"]
+
