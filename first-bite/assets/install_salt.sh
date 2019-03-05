@@ -2,10 +2,12 @@
 
 # Add the current saltstack repo to APT
 
-mv ~/.dotfiles/* ~/
+mv ~/dotfiles/bashrc ~/.bashrc
+mv ~/dotfiles/vimrc ~/.vimrc
 source ~/.bashrc
 
 exit
+
 cd ~/tutorial/docker
 docker-compose build
 docker-compose up -d
