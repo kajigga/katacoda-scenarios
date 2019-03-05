@@ -5,7 +5,7 @@ version: "3"
 
 services:
   sm:
-    image: kajigga/sm-cn-7:latest
+    image: kajigga/sm-cn-7:0.2
     privileged: true
     ports:
       - "4505"
@@ -14,7 +14,7 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
   centos:
-    image: kajigga/smin-cn-7:latest
+    image: kajigga/smin-cn-7:0.2
     privileged: true
     depends_on:
       - sm
@@ -22,7 +22,7 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
   ubuntu:
-    image: kajigga/smin-ub-18:latest
+    image: kajigga/smin-ub-18:0.2
     privileged: true
     depends_on:
       - sm
