@@ -2,7 +2,7 @@
 
 # Add the current saltstack repo to APT
 
-mv ~/dotfiles/* ~/
+mv ~/.dotfiles/* ~/
 source ~/.bashrc
 
 exit
