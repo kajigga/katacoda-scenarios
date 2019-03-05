@@ -2,13 +2,12 @@
 
 # Add the current saltstack repo to APT
 
-echo "waiting for .bashrc"
-until [ -f ~/.bashrc ]; do
-echo "."
-done
+# echo "waiting for .bashrc"
+# until [ -f ~/.bash_aliases ]; do
+# echo "."
+# done
 
 
-. ~/.bashrc
 exit
 
 cd ~/tutorial/docker
