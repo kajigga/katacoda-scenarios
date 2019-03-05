@@ -6,7 +6,10 @@
 # until [ -f ~/.bash_aliases ]; do
 # echo "."
 # done
+mv ~/dotfiles/bash_aliases ~/.bash_aliases
+. ~/.bashrc
 
+mv ~/dotfiles/vimrc ~/.vimrc
 
 exit
 
