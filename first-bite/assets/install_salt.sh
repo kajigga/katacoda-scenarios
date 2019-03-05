@@ -2,15 +2,16 @@
 
 # Add the current saltstack repo to APT
 
-mv ~/dotfiles/bashrc ~/.bashrc
-mv ~/dotfiles/vimrc ~/.vimrc
+cp ~/dotfiles/bashrc ~/.bashrc
+cp ~/dotfiles/vimrc ~/.vimrc
+
+sleep 1
 source ~/.bashrc
 
+cd ~/tutorial/docker
+docker-compose up -d
 exit
 
-cd ~/tutorial/docker
-docker-compose build
-docker-compose up -d
 
 
 curl https://repo.saltstack.com/py3/ubuntu/16.04/amd64/2019.2/SALTSTACK-GPG-KEY.pub | apt-key add -
