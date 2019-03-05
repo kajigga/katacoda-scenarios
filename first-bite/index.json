@@ -29,16 +29,16 @@
             "target": "~/"
         },
         {
-            "file": "docker/*",
-            "target": "~/tutorial/docker/"
-        },
-        {
             "file": "docker/master.d/*",
             "target": "~/tutorial/docker/master.d/"
         },
         {
             "file": "docker/minion.d/*",
             "target": "~/tutorial/docker/minion.d/"
+        },
+        {
+            "file": "docker/docker-compose.yml",
+            "target": "~/tutorial/docker/docker-compose.yml"
         },
         {
             "file": "dotfiles/*",
