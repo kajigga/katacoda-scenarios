@@ -22,9 +22,10 @@ services:
       - "4506"
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "./master.d:/etc/salt/master.d/:z"
-      - "./minion.d:/etc/salt/minion.d:z"
+      - "../master.d:/etc/salt/master.d/:z"
+      - "../minion.d:/etc/salt/minion.d:z"
   centos:
+    container_name: centos-1
     build:
       context: ./
       dockerfile: Dockerfile.minion
@@ -33,8 +34,9 @@ services:
       - sm
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "./minion.d:/etc/salt/minion.d/:z"
-  ubuntu:
+      - "../minion.d:/etc/salt/minion.d/:z"
+  ubuntu1:
+    container_name: ubuntu1 
     build:
       context: ./
       dockerfile: Dockerfile.minion-ubu
@@ -43,4 +45,16 @@ services:
       - sm
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "./minion.d:/etc/salt/minion.d/:z"
+      - "../minion.d:/etc/salt/minion.d/:z"
+
+  ubuntu2:
+    container_name: ubuntu2 
+    build:
+      context: ./
+      dockerfile: Dockerfile.minion-ubu
+    privileged: true
+    depends_on:
+      - sm
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "../minion.d:/etc/salt/minion.d/:z"
