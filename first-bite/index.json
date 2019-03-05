@@ -1,5 +1,5 @@
 { "title": "First Bite of Salt",
-  "description": "First Bite of Salt",
+  "description": "First Bite of Salt v3",
   "details": {
     "steps": [
       {
@@ -17,7 +17,7 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "assets/launch_install.sh"
+      "courseData": "assets/launch_install.sh"
     },
     "finish": {
       "text": "finish.md"
@@ -48,7 +48,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
+    "uilayout": "terminal-terminal",
     "showdashboard": false,
     "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Display 8080", "port": 8080}]
   },
