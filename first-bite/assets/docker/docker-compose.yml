@@ -21,7 +21,7 @@ services:
       - "4505"
       - "4506"
     volumes:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      # - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
       - "./minion.d:/etc/salt/minion.d:z"
   centos:
