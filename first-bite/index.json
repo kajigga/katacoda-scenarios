@@ -41,16 +41,12 @@
             "target": "~/tutorial/docker/"
         },
         {
-            "file": "dotfiles/*",
-            "target": "~/dotfiles"
+            "file": "dotfiles/.bash_aliases",
+            "target": "~/"
         },
         {
-            "file": "dotfiles/bashrc",
-            "target": "~/.bash_aliases"
-        },
-        {
-            "file": "dotfiles/vimrc",
-            "target": "~/.vimrc"
+            "file": "dotfiles/.vimrc",
+            "target": "~/"
         }
 
 
