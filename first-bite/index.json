@@ -41,7 +41,7 @@
             "target": "~/tutorial/minion.d"
         },
         {
-            "file": "dotfiles",
+            "file": "dotfiles/*",
             "target": "~/.dotfiles"
         }
       ]
