@@ -5,10 +5,11 @@
 echo "waiting for .bashrc"
 until [ -f ~/.bashrc ]; do
 echo "."
+done
 
-exit
 
 . ~/.bashrc
+exit
 
 cd ~/tutorial/docker
 docker-compose up -d
