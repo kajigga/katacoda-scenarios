@@ -4,8 +4,11 @@
 
 cp ~/dotfiles/bashrc ~/.bashrc
 cp ~/dotfiles/vimrc ~/.vimrc
+ln -s ~/tutorial/master.d ~/tutorial/docker/
+ln -s ~/tutorial/minion.d ~/tutorial/docker/
 
 sleep 1
+
 source ~/.bashrc
 
 cd ~/tutorial/docker

@@ -23,8 +23,8 @@ services:
       - "4506"
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "../master.d:/etc/salt/master.d/:z"
-      - "../minion.d:/etc/salt/minion.d:z"
+      - "./master.d:/etc/salt/master.d/:z"
+      - "./minion.d:/etc/salt/minion.d:z"
   centos:
     container_name: centos-1
     image: kajigga/smin-cn-7:0.1
@@ -36,7 +36,7 @@ services:
       - sm
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "../minion.d:/etc/salt/minion.d/:z"
+      - "./minion.d:/etc/salt/minion.d/:z"
   ubuntu:
     image: kajigga/smin-ub-18:latest
     container_name: ubuntu
@@ -45,4 +45,4 @@ services:
       - sm
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "../minion.d:/etc/salt/minion.d/:z"
+      - "./minion.d:/etc/salt/minion.d/:z"
