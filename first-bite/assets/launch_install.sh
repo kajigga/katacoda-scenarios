@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sh install_salt.sh
+bash ./install_salt.sh
