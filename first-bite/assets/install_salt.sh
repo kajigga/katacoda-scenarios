@@ -7,9 +7,9 @@ cp ~/dotfiles/vimrc ~/.vimrc
 mv ~/tutorial/master.d ~/tutorial/docker/
 mv ~/tutorial/minion.d ~/tutorial/docker/
 
-sleep 1
+sleep 5
 
-source ~/.bashrc
+. ~/.bashrc
 
 exit
 
