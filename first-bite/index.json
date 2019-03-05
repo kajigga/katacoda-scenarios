@@ -41,8 +41,8 @@
             "target": "~/tutorial/docker/"
         },
         {
-            "file": "dotfiles/",
-            "target": "~/"
+            "file": "dotfiles/*",
+            "target": "~/dotfiles"
         }
 
 
