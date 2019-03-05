@@ -39,11 +39,11 @@
         },
         {
             "file": "master.d/*",
-            "target": "~/tutorial/docker/master.d"
+            "target": "~/tutorial/master.d"
         },
         {
             "file": "minion.d/*",
-            "target": "~/tutorial/docker/minion.d"
+            "target": "~/tutorial/minion.d"
         }
 
       ]
