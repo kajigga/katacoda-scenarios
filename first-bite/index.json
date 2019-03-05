@@ -33,6 +33,14 @@
             "target": "~/tutorial/docker/"
         },
         {
+            "file": "docker/master.d/*",
+            "target": "~/tutorial/docker/master.d/"
+        },
+        {
+            "file": "docker/minion.d/*",
+            "target": "~/tutorial/docker/minion.d/"
+        },
+        {
             "file": "dotfiles/*",
             "target": "~/dotfiles"
         },
