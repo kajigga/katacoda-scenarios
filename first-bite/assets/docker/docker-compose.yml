@@ -1,22 +1,11 @@
-version: "2"
+version: "3"
 
 # https://hub.docker.com/r/centos/systemd/
 # https://hub.docker.com/r/jrei/systemd-ubuntu
 
 services:
-  # web:
-  #  image: nginx
-  #  volumes:
-  #    - ./html:/usr/share/nginx/html
-  #  ports:
-  #    - "80:80"
-  #  environment:
-  #    - NGINX_PORT=80
   sm:
-    image: kajigga/sm-cn-7:0.1
-    # build: 
-    #   context: ./
-    #   dockerfile: Dockerfile.master
+    image: kajigga/sm-cn-7:latest
     privileged: true
     ports:
       - "4505"
@@ -24,13 +13,8 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
-      - "./minion.d:/etc/salt/minion.d:z"
   centos:
-    container_name: centos-1
-    image: kajigga/smin-cn-7:0.1
-    # build:
-    #   context: ./
-    #   dockerfile: Dockerfile.minion
+    image: kajigga/smin-cn-7:latest
     privileged: true
     depends_on:
       - sm
@@ -39,7 +23,6 @@ services:
       - "./minion.d:/etc/salt/minion.d/:z"
   ubuntu:
     image: kajigga/smin-ub-18:latest
-    container_name: ubuntu
     privileged: true
     depends_on:
       - sm
