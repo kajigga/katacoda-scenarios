@@ -7,9 +7,9 @@
 # echo "."
 # done
 mv ~/dotfiles/bash_aliases ~/.bash_aliases
-. ~/.bashrc
-
 mv ~/dotfiles/vimrc ~/.vimrc
+. ~/.bash_aliases
+
 
 exit
 

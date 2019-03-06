@@ -23,18 +23,21 @@
       "text": "finish.md"
     },
     "assets": {
+      "host01": [
+        {
+            "file": "docker/master.d/*",
+            "target": "~/master.d/"
+        },
+        {
+            "file": "docker/minion.d/*",
+            "target": "~/minion.d/"
+        },
+
+      ],
       "client": [
         {
             "file": "install_salt.sh",
             "target": "~/"
-        },
-        {
-            "file": "docker/master.d/*",
-            "target": "~/tutorial/docker/master.d/"
-        },
-        {
-            "file": "docker/minion.d/*",
-            "target": "~/tutorial/docker/minion.d/"
         },
         {
             "file": "docker/docker-compose.yml",
