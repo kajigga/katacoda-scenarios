@@ -13,7 +13,7 @@ mv ~/dotfiles/vimrc ~/.vimrc
 
 exit
 
-cd ~/tutorial/docker
+cd ~/docker
 docker-compose up -d
 
 

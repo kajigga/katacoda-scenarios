@@ -25,17 +25,6 @@
     "assets": {
       "host01": [
         {
-            "file": "docker/master.d/*",
-            "target": "~/docker/master.d/"
-        },
-        {
-            "file": "docker/minion.d/*",
-            "target": "~/docker/minion.d/"
-        }
-
-      ],
-      "client": [
-        {
             "file": "install_salt.sh",
             "target": "~/"
         },
@@ -46,6 +35,14 @@
         {
             "file": "dotfiles/*",
             "target": "~/dotfiles"
+        },
+        {
+            "file": "docker/master.d/*",
+            "target": "~/docker/master.d/"
+        },
+        {
+            "file": "docker/minion.d/*",
+            "target": "~/docker/minion.d/"
         }
 
 
