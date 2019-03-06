@@ -6,6 +6,11 @@
 # until [ -f ~/.bash_aliases ]; do
 # echo "."
 # done
+echo "waiting for dotfiles"
+until [ -f ~/dotfiles ]; do
+echo "."
+done
+
 mv ~/dotfiles/bash_aliases ~/.bash_aliases
 mv ~/dotfiles/vimrc ~/.vimrc
 . ~/.bash_aliases

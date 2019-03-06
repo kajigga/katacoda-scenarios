@@ -5,7 +5,7 @@ version: "3"
 
 services:
   sm:
-    image: kajigga/sm-cn-7:0.2
+    image: kajigga/sm-cn-7:0.3
     hostname: master
     privileged: true
     ports:
@@ -19,16 +19,17 @@ services:
 
   centos:
     hostname: ubuntu
-    image: kajigga/smin-cn-7:0.2
+    image: kajigga/smin-cn-7:0.3
     privileged: true
     depends_on:
       - sm
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
+
   ubuntu:
     hostname: ubuntu
-    image: kajigga/smin-ub-18:0.2
+    image: kajigga/smin-ub-18:0.3
     privileged: true
     depends_on:
       - sm
@@ -38,7 +39,7 @@ services:
 
   raas:
     hostname: raas
-    image: kajigga/smin-cn-7:0.2
+    image: kajigga/smin-cn-7:0.3
     privileged: true
     ports:
       - "4505"
@@ -46,6 +47,9 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
+    depends_on:
+      - redis
+      - pg
 
   redis:
     image: redis
