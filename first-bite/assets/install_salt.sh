@@ -10,13 +10,17 @@ mv ~/dotfiles/bash_aliases ~/.bash_aliases
 mv ~/dotfiles/vimrc ~/.vimrc
 . ~/.bash_aliases
 
+cd ~/docker
+
+#unzip sse_installer.zip
+
+# we store PG data in a mounted volume that needs to exist prior to the docker
+# container starting
+mkdir pgdata
 
 exit
 
-cd ~/docker
 docker-compose up -d
-
-
 
 curl https://repo.saltstack.com/py3/ubuntu/16.04/amd64/2019.2/SALTSTACK-GPG-KEY.pub | apt-key add -
 echo "deb http://repo.saltstack.com/py3/ubuntu/16.04/amd64/2019.2 xenial main" > /etc/apt/sources.list.d/saltstack.list

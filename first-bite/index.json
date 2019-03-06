@@ -45,14 +45,13 @@
             "target": "~/docker/minion.d/"
         }
 
-
       ]
     }
   },
   "environment": {
     "uilayout": "terminal",
-    "showdashboard": false,
-    "dashboards": [{"name": "Display 80", "port": 80}, {"name": "Display 8080", "port": 8080}]
+    "showdashboard": true,
+    "dashboards": [{"name": "Display 443", "port": 443}]
   },
   "backend": {
     "imageid": "ubuntu",

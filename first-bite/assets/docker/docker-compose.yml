@@ -6,6 +6,7 @@ version: "3"
 services:
   sm:
     image: kajigga/sm-cn-7:0.2
+    hostname: master
     privileged: true
     ports:
       - "4505"
@@ -13,7 +14,11 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
+      - "./minion.d:/etc/salt/minion.d/:z"
+      - "../sse_installer/salt:/srv/salt:ro"
+
   centos:
+    hostname: ubuntu
     image: kajigga/smin-cn-7:0.2
     privileged: true
     depends_on:
@@ -22,6 +27,7 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
   ubuntu:
+    hostname: ubuntu
     image: kajigga/smin-ub-18:0.2
     privileged: true
     depends_on:
@@ -29,3 +35,29 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
+
+  raas:
+    hostname: raas
+    image: kajigga/smin-cn-7:0.2
+    privileged: true
+    ports:
+      - "4505"
+      - "4506"
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "./minion.d:/etc/salt/minion.d/:z"
+
+  redis:
+    image: redis
+    volumes:
+      - "./redis.conf:/usr/local/etc/redis/redis.conf:ro"
+
+  pg:
+    image: postgres:9.6
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: bonkerz
+      POSTGRES_USER: sseapi
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - "./pgdata:/var/lib/postgresql/data/pgdata:z"
