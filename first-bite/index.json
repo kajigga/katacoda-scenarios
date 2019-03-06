@@ -31,7 +31,7 @@
         {
             "file": "docker/minion.d/*",
             "target": "~/minion.d/"
-        },
+        }
 
       ],
       "client": [
