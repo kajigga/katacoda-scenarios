@@ -26,11 +26,11 @@
       "host01": [
         {
             "file": "docker/master.d/*",
-            "target": "~/master.d/"
+            "target": "~/docker/master.d/"
         },
         {
             "file": "docker/minion.d/*",
-            "target": "~/minion.d/"
+            "target": "~/docker/minion.d/"
         }
 
       ],
@@ -41,7 +41,7 @@
         },
         {
             "file": "docker/docker-compose.yml",
-            "target": "~/tutorial/docker/"
+            "target": "~/docker/"
         },
         {
             "file": "dotfiles/*",
