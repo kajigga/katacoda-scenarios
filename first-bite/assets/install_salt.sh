@@ -11,8 +11,16 @@ until [ -d ~/dotfiles ]; do
 echo "."
 done
 
+until [ -f ~/dotfiles/bash_aliases ]; do
+echo "."
+done
 mv ~/dotfiles/bash_aliases ~/.bash_aliases
+
+until [ -f ~/dotfiles/vimrc ]; do
+echo "."
+done
 mv ~/dotfiles/vimrc ~/.vimrc
+
 . ~/.bash_aliases
 
 cd ~/docker
