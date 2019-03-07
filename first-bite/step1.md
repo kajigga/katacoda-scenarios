@@ -9,7 +9,7 @@ Before we go too far, take a moment to familiarize yourself with how this course
 
 You may have noticed a whole lot of stuff happening in the right hand side of this window. This is the terminal console that you will use to enter commands and interact with the SaltStack system prepared. We are using docker to launch several virtual machines and finally enter the SaltMaster itself.
 
-To the right you have a terminal window where you can type commands. There will sometimes be commands in the text that you can click on and the command  will be entered for you.
+This left-hand side will contain information, instructions, and self-assessment questions. You will sometimes find links you can click on to have commands entered into the console.
 
 Let try it. We want the salt master to request that all minions execute a very simple `test.ping` command.
 

@@ -73,3 +73,6 @@ docker-compose exec sm bash
 #     sleep 1
 #     salt-key -a saltmaster -y
 # done
+
+
+clear
