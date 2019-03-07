@@ -20,6 +20,6 @@ These are two ways you will interact with the terminal during this course. There
 
 
 
->>True/False: The SaltStack master executes commands on the minions <<
+>>True/False: The SaltStack master connects to and runs commands on minions <<
 () Correct
 (*) Incorrect

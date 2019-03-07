@@ -1,0 +1,17 @@
+{
+    "title": "Kajigga Sample Pathway",
+    "description": "Example of a pathway",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "course_id": "first-bite",
+        "title": "Scenario with Terminal UI",
+        "description": "First Bite with Salt Example"
+      },
+      {
+        "title": "New Bite",
+        "description": "Description for New Bite",
+        "course_id": "newbite"
+      }
+    ]
+  }
