@@ -45,8 +45,11 @@ cd ~/docker
 # container starting
 mkdir pgdata
 
-
 docker-compose up -d
+
+docker-compose exec sm /masterprep.sh
+
+clear
 
 docker-compose exec sm bash
 

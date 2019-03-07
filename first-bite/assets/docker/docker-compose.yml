@@ -37,23 +37,23 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
 
-  raas:
-    hostname: raas
-    image: kajigga/smin-cn-7:0.3
-    privileged: true
-    ports:
-      - "443:443"
-      - "80:80"
-    volumes:
-      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
-      - "./minion.d:/etc/salt/minion.d/:z"
-    depends_on:
-      - redis
-      - pg
+  # raas:
+  #   hostname: raas
+  #   image: kajigga/smin-cn-7:0.3
+  #   privileged: true
+  #   ports:
+  #     - "443:443"
+  #     - "80:80"
+  #   volumes:
+  #     - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+  #     - "./minion.d:/etc/salt/minion.d/:z"
+  #   depends_on:
+  #     - redis
+  #     - pg
 
-  redis:
-    image: redis:5.0-alpine
-    command: redis-server --requirepass def456
+  # redis:
+  #   image: redis:5.0-alpine
+  #   command: redis-server --requirepass def456
 
   pg:
     image: kajigga/smin-cn-7:0.3
@@ -66,11 +66,4 @@ services:
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
-    # image: postgres:9.6
-    # restart: always
-    # environment:
-    #   POSTGRES_PASSWORD: bonkerz
-    #   POSTGRES_USER: sseapi
-    #   PGDATA: /var/lib/postgresql/data/pgdata
-    # volumes:
-    #   - "./pgdata:/var/lib/postgresql/data/pgdata:z"
+      - "./pgdata:/var/lib/postgresql/data/pgdata:z"

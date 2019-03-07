@@ -48,6 +48,10 @@
         {
             "file": "docker/minion.d/*",
             "target": "~/docker/minion.d/"
+        },
+        {
+            "file": "docker/masterprep.sh",
+            "target": "~/docker/"
         }
 
       ]
