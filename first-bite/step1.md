@@ -4,7 +4,6 @@ Remote execution is the idea that you can command minions [definition needed] to
 
 ## How this course works
 
-
 Before we go too far, take a moment to familiarize yourself with how this course works.
 
 You may have noticed a whole lot of stuff happening in the right hand side of this window. This is the terminal console that you will use to enter commands and interact with the SaltStack system prepared. We are using docker to launch several virtual machines and finally enter the SaltMaster itself.
@@ -21,25 +20,6 @@ These are two ways you will interact with the terminal during this course. There
 
 
 
-----
-Go to the docker folder `cd ~/tutorial/docker`{{execute}}.
-
-Allow a code block to be executed `docker container ls`{{execute}}
-
-
-Allow a code block to be copied `some-command`{{copy}}
-
->>Q1: Enter the extract string test<<
-=== test
-
->>Q2: Enter the string containing test<<
-=~= test
-
->>Q3: Multiple Choice <<
-[*] Correct
-[*] Correct
-[ ] Incorrect
-
->>Q4: Single Choice <<
-(*) Correct
-( ) Incorrect
+>>True/False: The SaltStack master executes commands on the minions <<
+() Correct
+(*) Incorrect
