@@ -10,16 +10,19 @@ i=1
 sp="/-\|"
 echo -n ' '
 
-echo "waiting for dotfiles"
 until [ -d ~/dotfiles ]; do
 printf "\b${sp:i++%${#sp}:1}"
 sleep 1
 done
 
+echo -n ' '
+
 until [ -f ~/dotfiles/bash_aliases ]; do
 printf "\b${sp:i++%${#sp}:1}"
 sleep 1
 done
+
+echo -n ' '
 
 mv ~/dotfiles/bash_aliases ~/.bash_aliases
 
@@ -27,6 +30,8 @@ until [ -f ~/dotfiles/vimrc ]; do
 printf "\b${sp:i++%${#sp}:1}"
 sleep 1
 done
+
+echo -n ' '
 
 mv ~/dotfiles/vimrc ~/.vimrc
 
