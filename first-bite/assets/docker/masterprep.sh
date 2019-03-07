@@ -14,7 +14,6 @@ do
    # or do whatever with individual element of the array
    until salt-key -l acc | grep -q -s $i; do
         printf "\b${sp:i++%${#sp}:1}"
-        sleep 1
    done
 
 done

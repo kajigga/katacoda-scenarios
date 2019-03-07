@@ -15,7 +15,8 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
       - "./minion.d:/etc/salt/minion.d/:z"
-      - "./sse_installer:/srv:z"
+      #- "./sse_installer:/srv:z"
+      - "./masterprep.sh:/masterprep.sh:z"
 
   centos:
     hostname: centos

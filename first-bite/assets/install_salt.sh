@@ -47,9 +47,9 @@ mkdir pgdata
 
 docker-compose up -d
 
-docker-compose exec sm /masterprep.sh
+docker-compose exec sm sh /masterprep.sh
 
-clear
+reset
 
 docker-compose exec sm bash
 
@@ -78,4 +78,4 @@ docker-compose exec sm bash
 # done
 
 
-clear
+reset
