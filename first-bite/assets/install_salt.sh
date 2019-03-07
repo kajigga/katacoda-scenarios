@@ -8,7 +8,6 @@
 # done
 echo "waiting for dotfiles"
 until [ -d ~/dotfiles ]; do
-echo "."
 done
 
 until [ -f ~/dotfiles/bash_aliases ]; do

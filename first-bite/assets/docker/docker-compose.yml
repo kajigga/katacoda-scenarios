@@ -15,10 +15,10 @@ services:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./master.d:/etc/salt/master.d/:z"
       - "./minion.d:/etc/salt/minion.d/:z"
-      #- "../sse_installer/salt:/srv/salt:ro"
+      - "./sse_installer:/srv:z"
 
   centos:
-    hostname: ubuntu
+    hostname: centos
     image: kajigga/smin-cn-7:0.3
     privileged: true
     depends_on:
@@ -42,8 +42,8 @@ services:
     image: kajigga/smin-cn-7:0.3
     privileged: true
     ports:
-      - "4505"
-      - "4506"
+      - "443:443"
+      - "80:80"
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
       - "./minion.d:/etc/salt/minion.d/:z"
@@ -52,16 +52,25 @@ services:
       - pg
 
   redis:
-    image: redis
-    volumes:
-      - "./redis.conf:/usr/local/etc/redis/redis.conf:ro"
+    image: redis:5.0-alpine
+    command: redis-server --requirepass def456
 
   pg:
-    image: postgres:9.6
-    restart: always
-    environment:
-      POSTGRES_PASSWORD: bonkerz
-      POSTGRES_USER: sseapi
-      PGDATA: /var/lib/postgresql/data/pgdata
+    image: kajigga/smin-cn-7:0.3
+    hostname: pg
+    privileged: true
+    ports:
+      - "5432"
+    depends_on:
+      - sm
     volumes:
-      - "./pgdata:/var/lib/postgresql/data/pgdata:z"
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+      - "./minion.d:/etc/salt/minion.d/:z"
+    # image: postgres:9.6
+    # restart: always
+    # environment:
+    #   POSTGRES_PASSWORD: bonkerz
+    #   POSTGRES_USER: sseapi
+    #   PGDATA: /var/lib/postgresql/data/pgdata
+    # volumes:
+    #   - "./pgdata:/var/lib/postgresql/data/pgdata:z"
