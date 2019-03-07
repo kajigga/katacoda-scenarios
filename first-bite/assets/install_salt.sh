@@ -19,11 +19,11 @@ echo -n ' '
 
 if [ -f ~/dotfiles/bash_aliases ]; then
 mv ~/dotfiles/bash_aliases ~/.bash_aliases
-elif
+fi
 
 if [ -f ~/dotfiles/vimrc ]; then
 mv ~/dotfiles/vimrc ~/.vimrc
-elif
+fi
 
 . ~/.bash_aliases
 
