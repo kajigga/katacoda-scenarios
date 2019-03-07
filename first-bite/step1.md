@@ -1,14 +1,6 @@
 # Chapter 2 - Salt Concepts and Terminology
 
 
-```eval_rst
-.. contents::
-   :depth: 2
-```
-
-
-<div class="page-break"></div>
-
 ## 2.1 Objectives
 
 In this section we will discuss:
@@ -21,7 +13,6 @@ In this section we will discuss:
 
 The Salt platform, or simply `Salt` is a Python-based open-source remote execution framework for configuration management, automation, provisioning, and orchestration.
 
-<div class="page-break"></div>
 
 ## 2.2 Features of Salt
 
@@ -66,7 +57,6 @@ Multiple cloud providers can be configured on a single Salt Master. Salt Cloud d
 
 Salt cloud provides provisioning of new instances in both public and private clouds
 
-<div class="page-break"></div>
 
 ## 2.3 Salt Management Concepts
 
@@ -81,7 +71,6 @@ A SaltStack Enterprise implementation consists of an Enterprise system with one 
 
 SaltStack Enterprise Framework
 
-<div class="page-break"></div>
 
 ### 2.3.1 SaltStack Enterprise
 
@@ -111,7 +100,6 @@ A system under control of the master is considered a Salt Minion. However, minio
 * The `salt-minion` service runs as a management agent on a system.
 * The `salt-minion` service can run pretty much anywhere you can have a Python interpreter.
 
-<div class="page-break"></div>
 
 ## 2.4 Salt Topology
 
@@ -144,7 +132,6 @@ One of the greatest strengths of Salt is the speed of execution. The socket-leve
 
 The remote execution system is at the heart of what makes Salt a powerful and useful platform. The remote execution system is the component that all components are built upon.
 
-<div class="page-break"></div>
 
 ## 2.5 YAML Salt Configuration File Format
 
@@ -183,7 +170,6 @@ fruit: apples
 grains: bread
 ```
 
-<div class="page-break"></div>
 
 #### List
 
@@ -220,7 +206,6 @@ dinner:
 * YAML is organized into block structures.
 * A collection, which is a list, or dictionary block sequence, indicates each entry with a hyphen and a space ( “- ”).
 
-<div class="page-break"></div>
 
 ### 2.5.4 Additional YAML Resources
 
@@ -232,7 +217,6 @@ Additional information can be found at:
 
 <b>Tip:</b> You may want to save these YAML websites for reference throughout the course.
 
-<div class="page-break"></div>
 
 ## 2.6 Summary
 
