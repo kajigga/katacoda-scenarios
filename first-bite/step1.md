@@ -2,9 +2,12 @@
 
 Remote execution is the idea that you can command minions [definition needed] to execute a command. With SaltStack, the master only publishes a job [description needed]. Every connected minion sees this published job. A minion will executes that job if it determines that it is in the target [definition needed].
 
-## How this Katacoda course works
+## How this course works
 
-Before we go too far, take a moment to familiarize yourself with how this katacoda system works.
+
+Before we go too far, take a moment to familiarize yourself with how this course works.
+
+You may have noticed a whole lot of stuff happening in the right hand side of this window. This is the terminal console that you will use to enter commands and interact with the SaltStack system prepared. We are using docker to launch several virtual machines and finally enter the SaltMaster itself.
 
 To the right you have a terminal window where you can type commands. There will sometimes be commands in the text that you can click on and the command  will be entered for you.
 
