@@ -17,23 +17,13 @@ done
 
 echo -n ' '
 
-until [ -f ~/dotfiles/bash_aliases ]; do
-printf "\b${sp:i++%${#sp}:1}"
-sleep 1
-done
-
-echo -n ' '
-
+if [ -f ~/dotfiles/bash_aliases ]; then
 mv ~/dotfiles/bash_aliases ~/.bash_aliases
+elif
 
-until [ -f ~/dotfiles/vimrc ]; do
-printf "\b${sp:i++%${#sp}:1}"
-sleep 1
-done
-
-echo -n ' '
-
+if [ -f ~/dotfiles/vimrc ]; then
 mv ~/dotfiles/vimrc ~/.vimrc
+elif
 
 . ~/.bash_aliases
 
@@ -47,9 +37,9 @@ mkdir pgdata
 
 docker-compose up -d
 
-docker-compose exec sm sh /masterprep.sh
+# docker-compose exec sm sh /masterprep.sh
 
-reset
+clear
 
 docker-compose exec sm bash
 
@@ -78,4 +68,3 @@ docker-compose exec sm bash
 # done
 
 
-reset
